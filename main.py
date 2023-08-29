@@ -148,7 +148,7 @@ async def restart_handler(_, m):
 @bot.on_message(filters.command(["pro_txt"]))
 async def account_login(bot: Client, m: Message):
     user = m.from_user.id if m.from_user is not None else None
-    if user is not None and user not in sudo_users:
+    if user is not sudo_users:
         await m.reply("**bhag bhosadi ke", quote=True)
         return
     else:
