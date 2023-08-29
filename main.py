@@ -146,10 +146,7 @@ async def restart_handler(_, m):
 
 @bot.on_message(filters.command(["pro_txt"]))
 async def account_login(bot: Client, m: Message):
-    if cmd.from_user.id in Config.AUTH_USERS:
-        await cmd.reply_text("Sorry, You are no allowed to use me..")
-        return
-    else:
+    
         editable = await m.reply_text(
             "Hello Bruh **I am Text Downloader Bot**. I can download videos from **text** file one by one.**\n\nDeveloper** : उससे क्या होगा काम से काम रखो 😂 @Adrenalinators**\nLanguage** : Python**\nFramework** : Pyrogram\n\nSend **TXT** File {Name : Link}")
     input: Message = await bot.listen(editable.chat.id)
